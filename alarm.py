@@ -1,3 +1,6 @@
+# Temperatue Alarm with Buzzer and LED Set the an alam off for a temperature treashold. 
+# Ajust the threshold tempetarure, alam will stop when temperute is below threshold again.
+
 import time
 from machine import Pin, PWM
 from machine import Pin
@@ -33,7 +36,7 @@ def my_function():
 while True:
     reading = sensor_temp.read_u16()*conversion_factor
     temperature = 27 - (reading - 0.706)/0.001721 #actual reading in Cº, see pag 571 of the data sheet
-    if temperature > 36: #ajust the threshold tempetarure, alam will stop when temperute is below threshold again
+    if temperature > 36: #threshold tempetarure
         print("temperature:",temperature)
         my_function()
     else: 
