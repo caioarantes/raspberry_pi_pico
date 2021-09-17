@@ -17,8 +17,7 @@ pwm_2 = PWM(Pin(25)) #Built-in LED Pin 25
 pwm.freq(800)
 pwm_2.freq(800)
 
-def my_function():
-    # to turn fade the and Buzzer LED in and out a few times.
+def my_function(): # PWM function from the documentation, to turn on and off with fade both the Buzzer and LED a few times.
     duty = 0
     direction = 1
     for _ in range(8 * 256):
